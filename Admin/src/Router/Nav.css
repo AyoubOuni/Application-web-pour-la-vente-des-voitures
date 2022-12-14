@@ -1,0 +1,17 @@
+.activenav{
+    background-color: Orange;
+   color:black;
+   border:1px solid Orange;
+   border-radius:4px;
+   padding:8px;
+   text-decoration: none;   
+   }
+   .notactive{
+       color:black;
+   
+       padding:8px;
+      text-decoration: none;   
+      margin-right: 23px;
+      }
+      .notactive:hover{color:black;}
+      .activenav:hover{color:black;}

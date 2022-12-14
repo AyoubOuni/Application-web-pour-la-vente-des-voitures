@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root {
+
+  /* --- Colors --- */
+
+  --light-blue-100: 199, 84%, 55%; /* #2bb0ed */
+  --light-blue-500: 202, 83%, 41%; /* #127fbf */
+  --light-blue-900: 204, 96%, 27%; /* #035388 */
+
+  --blue-100:       210, 22%, 49%; /* #627d98 */
+  --blue-500:       209, 34%, 30%; /* #334e68 */
+  --blue-900:       209, 61%, 16%; /* #102a43 */
+
+  --gray-100:       210, 36%, 96%; /* #f0f4F8 */
+  --gray-300:       212, 33%, 89%; /* #d9e2ec */
+  --gray-500:       210, 31%, 80%; /* #bcccdc */
+  --gray-700:       211, 27%, 70%; /* #9fb3c8 */
+  --gray-900:       209, 23%, 60%; /* #829ab1 */
+
+  --white:          0, 0%, 100%;   /* #ffffff */
+
+  /* --- Typography --- */
+
+  --font-family-sans-serif: "Montserrat", sans-serif;
+
+  /* --- Layout --- */
+
+  --space-multiplier:  0.8;
+
+  --content-max-width: 140rem;
+
+  --grid-spacer-width: 1.5rem;
+  --grid-column-count: 12;
+
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * Reset box-sizing on all elements
+ *
+ * `border-box` includes padding and border in the calculations for total
+ * width, height values. This is more predictable than the default
+ * `content-box`, which does the opposite.
+ *
+ * 1. Apply `inherit` to all elements (global selector)
+ * 2. Apply the same with a global selector for pseudo-elements
+ */
+
+* {
+  box-sizing: inherit; /* 1 */
+}
+
+*::before,
+*::after {
+  box-sizing: inherit; /* 2 */
+}
+
+/**
+ * 1. Now add `border-box` to `html`, which will cascade down through all
+ *    elements, but leaves box-sizing easy to overwrite on a parent component
+ *
+ *    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ *
+ * 2. Set `html` font size to 62.5%, equal to 10px or 1rem
+ *
+ *    https://css-tricks.com/accessible-font-sizing-explained/
+ *
+ * 3. Set up full viewport height for sticky footer
+ * 4. Prevent font size adjustment after orientation change in iOS
+ */
+
+ html {
+  box-sizing: border-box; /* 1 */
+  font-size: 62.5%; /* 2 */
+  height: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 4 */
+}
+
+:focus-visible {
+  outline: hsl(var(--light-blue-900)) auto 1px;
+  outline-offset: 0;
+}
+
+body {
+  color: hsl(var(--blue-900));
+  font-family: var(--font-family-sans-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  line-height: 1.8;
+  margin: 3rem;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+/* Visibility
+   ========================================================================== */
+
+/**
+ * Visually hidden class
+ *
+ * Hides content to visual users, but leaves it accessible to screen reader
+ * users. The combination of these properties will ensure that the element
+ * is truly hidden and not getting smushed in the corner of the screen.
+ *
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+
+
+
+
+/* Links
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+:root {
+
+  --form-accent-color: var(--light-blue-500);
+  --form-error-color: 356, 75%, 53%; /* #e12d39 */
+
+  /* --- Fields --- */
+
+  --field-background-color: hsl(var(--white));
+  --field-border-width: 1px;
+  --field-border-style: solid;
+  --field-border-color: hsl(var(--gray-500));
+  --field-border: var(--field-border-width)
+    var(--field-border-style)
+    var(--field-border-color);
+  --field-border-radius: 3px;
+  --field-height: 4.2rem;
+  --field-padding: 0 calc(var(--space-multiplier) * 2rem);
+  --field-text-color: hsl(var(--blue-900));
+  --field-text-font-family: var(--font-family-sans-serif);
+  --field-text-font-size: 1.4rem;
+  --field-text-font-weight: 500;
+  --field-text-letter-spacing: 0.05em;
+
+  /* --- Labels --- */
+
+  --label-text-color: hsl(var(--blue-900));
+  --label-text-font-family: var(--font-family-sans-serif);
+  --label-text-font-size: 1.4rem;
+  --label-text-font-weight: 600;
+  --label-text-letter-spacing: 0.05em;
+
+  /* --- Error Text ---*/
+
+  --error-text-color: hsl(var(--form-error-color));
+  --error-text-font-family: var(--font-family-sans-serif);
+  --error-text-font-size: 1.2rem;
+  --error-text-font-weight: 500;
+  --error-text-letter-spacing: 0.05em;
+
+}
+
+@media only screen and (min-width: 640px) {
+  :root {
+    --field-height: 4.6rem;
+  }
+}
+
+/* Fieldset
+   ========================================================================== */
+
+
+
+/* Labels
+   ========================================================================== */
+
+label,
+legend {
+  color: var(--label-text-color);
+  font-family: var(--label-text-font-family);
+  font-size: var(--label-text-font-size);
+  font-weight: var(--label-text-font-weight);
+  display: block;
+  letter-spacing: var(--label-text-letter-spacing);
+  line-height: 1.6;
+  padding-bottom: calc(var(--space-multiplier) * 1rem);
+  position: relative;
+}
+
+label > [data-required="true"]::after,
+legend > [data-required="true"]::after {
+  color: hsl(var(--form-error-color));
+  content: "*";
+  padding-left: 0.25em;
+  position: absolute;
+}
+
+/* Fields
+   ========================================================================== */
+
+[multiple],
+[type="date"],
+
+[type="number"],
+
+[type="tel"],
+#nom,#prenom,#addresse,
+
+#picture,
+#motdepasse,#e-mail,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  background-color: var(--field-background-color);
+  border: var(--field-border);
+  border-radius: var(--field-border-radius);
+  color: var(--field-text-color);
+  display: block;
+  font-family: var(--field-text-font-family);
+  font-size: var(--field-text-font-size);
+  font-weight: var(--field-text-font-weight);
+  letter-spacing: var(--field-text-letter-spacing);
+  width: 100% !important;
+}
+
+[multiple],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select {
+  line-height: var(--field-height);
+  padding: var(--field-padding);
+}
+
+
+
+
+/* --- Checkbox and Radio --- */
+
+
+
+
+[type="radio"],
+[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  background-color: var(--field-background-color);
+  border: var(--field-border);
+  color: currentColor;
+  font: inherit;
+  height: 2rem !important;
+  margin: 0;
+  width: 2rem !important;
+}
+
+[type="radio"]:focus-visible,
+[type="checkbox"]:focus-visible {
+  outline-offset: 4px;
+}
+
+[type="radio"]:checked,
+[type="checkbox"]:checked {
+  --field-border-color: transparent;
+  --field-border: var(--field-border-width)
+    var(--field-border-style)
+    var(--field-border-color);
+  background-color: hsl(var(--form-accent-color));
+}
+
+[type="radio"] {
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+[type="radio"]::before {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1em var(--field-background-color);
+  content: '';
+  height: 0.55em;
+  width: 0.55em;
+}
+
+
+
+/* Errors
+   ========================================================================== */
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  --field-border-color: hsl(var(--form-error-color));
+  --field-border: var(--field-border-width)
+    var(--field-border-style)
+    var(--field-border-color);
+  --field-text-color: var(--error-text-color);
+  box-shadow: 0 0 0 1px hsl(var(--form-error-color));
+}
+
+select[aria-invalid="true"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='hsl(356, 75%, 53%)' d='M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z'/%3E%3C/svg%3E");
+}
+
+/* --- Error Text --- */
+
+.form__error-text {
+  color: var(--error-text-color);
+  font-family: var(--error-text-font-family);
+  font-size: var(--error-text-font-size);
+  font-weight: var(--error-text-font-weight);
+  letter-spacing: var(--error-text-letter-spacing);
+  line-height: 1.6;
+  margin-top: calc(var(--space-multiplier) * 1rem);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+
+
+
+/* ==========================================================================
+   Component: Progress Form
+   ========================================================================== */
+
+.progress-form {
+  background-color: hsl(var(--white));
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgb(0, 0, 0, 10%),
+    0 1px 2px -1px rgb(0, 0, 0, 10%);
+}
+
+/* Tabs
+   ========================================================================== */
+
+.progress-form__tabs {
+  column-gap: 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .progress-form__tabs {
+    column-gap: 0.2rem;
+  }
+}
+
+.progress-form__tabs-item {
+  --button-background-color: transparent;
+  --button-border-width: 5px;
+  --button-border-style: solid;
+  --button-border-color:  hsl(var(--gray-300));
+  --button-border: var(--button-border-width)
+    var(--button-border-style)
+    var(--button-border-color);
+  --button-border-radius: 0;
+  --button-height: 1.4;
+  --button-text-align: left;
+  --button-text-color: hsl(var(--blue-900));
+  --button-text-font-size: 1.4rem;
+  --button-text-letter-spacing: 0.025em;
+  --button-text-shadow: none;
+
+  background-color: var(--button-background-color);
+  border: 0;
+  border-top: var(--button-border);
+  border-radius: var(--button-border-radius);
+  color: var(--button-text-color);
+  display: none;
+  font-size: var(--button-text-font-size);
+  letter-spacing: var(--button-text-letter-spacing);
+  line-height: var(--button-height);
+  position: relative;
+  text-align: var(--button-text-align);
+  text-shadow: var(--button-text-shadow);
+  transition: color 0.2s ease-in-out;
+  white-space: normal;
+}
+
+.progress-form__tabs-item:active {
+  transform: none;
+}
+
+.progress-form__tabs-item:hover,
+.progress-form__tabs-item:focus {
+  background-color: inherit;
+  color: inherit;
+}
+
+.progress-form__tabs-item::before {
+  background-color: hsl(var(--light-blue-500));
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: -5px;
+  transition: width 0.2s ease-in-out;
+  width: 0;
+}
+
+.progress-form__tabs-item > .step {
+  color: hsl(var(--blue-100));
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 640px) {
+  .progress-form__tabs-item {
+    display: block;
+  }
+}
+
+/* --- Current Step --- */
+
+.progress-form__tabs-item[aria-selected="true"] {
+  display: block;
+}
+
+.progress-form__tabs-item[aria-selected="true"]::before {
+  width: 50%;
+}
+
+.progress-form__tabs-item[aria-selected="true"] > .step {
+  color: hsl(var(--light-blue-500));
+}
+
+/* --- Disabled Step --- */
+
+@media only screen and (min-width: 640px) {
+  .progress-form__tabs-item[aria-disabled="true"] {
+    --button-background-color: transparent;
+    --button-text-color: hsl(var(--blue-100));
+
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+  }
+}
+
+/* --- Completed Step --- */
+
+.progress-form__tabs-item[data-complete="true"]::before {
+  width: 100%;
+}
+
+.progress-form__tabs-item[data-complete="true"] > .step {
+  color: hsl(var(--light-blue-500));
+}
+.hide{display:none}
+
+.alert-success{
+      background: #f4f4f4;
+    color: #269612;
+    border-radius: 4px;
+    padding: 10px;
+}
+table {
+  max-width: 1140px;
+}
+

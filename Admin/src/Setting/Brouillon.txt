@@ -1,0 +1,101 @@
+<div className="d-flex justify-content-center">
+        <form className="needs-validation card w-50" method="post" action="http://localhost/Projet%20IHM/User/Inscription.php" noalidate="">
+        <fieldset>
+      <legend className="text-primary  card-header text-center h2 ">Update</legend>
+      <div id="cardbody" className="card-body">
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="nom">Username</label>
+      <span className="col-sm-4" >
+              <input   type="text" name="nom" className=" form-control  " required="" id="nom" placeholder="ecrire votre Username"></input>
+              </span>
+          
+   
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="nom">Nom</label>
+      <span className="col-sm-4" >
+              <input   type="text" name="nom" className=" form-control  " required="" id="nom" placeholder="ecrire votre nom"></input>
+              </span>
+          
+   
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="prenom">Prenom</label>
+      <span className="col-sm-4" >
+              <input  type="text"name="prenom" className=" form-control "  id="prenom" placeholder="ecrire votre prenom"></input>
+              </span>
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="email">Email</label>
+      <span className="col-sm-4" >
+              <input  type="email" name="email" className=" form-control "  id="email" placeholder="ecrire votre email"></input>
+              </span>
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="password">Password</label>
+      <span className="col-sm-4" >
+              <input  type="password" name="password" className=" form-control "  id="password" placeholder="ecrire votre password"></input>
+              </span>
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="adress">Adress</label>
+      <span className="col-sm-4" >
+              <input  type="text" name="address" className=" form-control "  id="adress" placeholder="ecrire votre adress"></input>
+              </span>
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="cin">N°Cin</label>
+      <span className="col-sm-4" >
+              <input  type="text" name="cin"className=" form-control "  id="cin" placeholder="ecrire votre numero de cin"></input>
+        </span>
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+
+      <label className="col-sm-3 text-center mt-1 h5" htmlFor="tel">N°Tel</label>
+      <span className="col-sm-4" >
+      <div className="input-group">
+  <span className="input-group-text" id="before">+216</span>
+              <input  type="tel" name="tel" className=" form-control "  id="tel" placeholder="ecrire votre numero de telephone"></input>
+             </div>
+              </span>
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-3 mt-1  text-nowrap h5" htmlFor="datenissance">Date de nissance</label>
+      <span className="col-sm-4" >
+              <input   type="date" name="datenissance" className=" form-control "  id="datenissance" ></input>
+              </span>
+
+      </div>
+      <br />
+      <div className="row d-flex justify-content-center">
+      <label className="col-sm-2   text-nowrap h5" htmlFor="sexe">Sexe</label>
+      <div class="form-check col-sm-2 ms-4">
+  <input class="form-check-input" type="radio" name="sexe" value="Homme" id="flexRadioDefault1" checked/>
+  <label class="form-check-label" for="flexRadioDefault1">Homme</label>
+</div>
+<div class="form-check col-sm-1 ">
+  <input class="form-check-input" type="radio" value="Femme" name="sexe" id="flexRadioDefault2" />
+  <label class="form-check-label" for="flexRadioDefault2">Femme  </label>
+</div>
+      </div>
+      <br />
+      <br />
+
+      <span className="d-flex justify-content-center">
+      <button type="submit"  className="btn btn-primary ">Valider</button>
+      </span>
+      </div>
+      </fieldset>
+      
+
+</form>
+
+    </div>

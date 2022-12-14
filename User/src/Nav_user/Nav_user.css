@@ -1,0 +1,14 @@
+.activenav{ color: #ff6600; margin-right: 13px; text-decoration: none ; border-bottom: 2px solid #ff6600; padding: 0 0 3.5px; cursor: pointer;}
+.notactive{color:white;padding:8px;text-decoration: none; margin-right: 13px; cursor: pointer; offset:90px;}
+.notactive:hover{color:white;}
+.activenav:hover{color: #F36F25;}
+.blue{background-color:#03224c; height:65px; }
+.marg  {margin-right: 210px; margin-top:-43px; font-size:19px;}
+.marg2  {position: relative; left:40px}
+
+
+.sticky{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+}

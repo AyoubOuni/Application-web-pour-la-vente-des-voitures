@@ -1,0 +1,29 @@
+use user;
+create TABLE utilisateur(
+                      Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                        Nom VARCHAR(30) NOT NULL,
+                        Prenom VARCHAR(30) NOT NULL,
+    					Email VARCHAR(50) NOT NULL,
+                        Adresse VARCHAR(70) NOT NULL,
+                        Cin integer(8) NOT NULL,
+    					tel integer(8) NOT NULL,
+   						Datenissance Date,
+   						 Sexe VarChar(40),
+                        DateInscription TIMESTAMP,
+                        UNIQUE(Email));
+                        $sql = "INSERT INTO `utilisateur` ( `Nom`, `Prenom`, `Email`, `Password`, `Adresse`, `Cin`, `tel`,`Datenissance`,`Sexe`) VALUES('$_POST[nom]','$_POST[prenom]','$_POST[email]','$_POST[password]','$_POST[address]','$_POST[cin]','$_POST[tel]','$_POST[datenissance]','$_POST[sexe]')";
+
+   create TABLE user(
+                      Id Varchar(50)  PRIMARY KEY,
+                        Nom VARCHAR(30) NOT NULL,
+                        Prenom VARCHAR(30) NOT NULL,
+    					Email VARCHAR(50) NOT NULL,
+    					Password VARCHAR(50) NOT NULL,
+                        Adresse VARCHAR(70) NOT NULL,
+                        Cin integer(8) NOT NULL,
+    					tel integer(8) NOT NULL,
+   						Datenissance Date,
+   						Sexe VarChar(40),
+                        url VARCHAR(100) ,
+                        DateInscription TIMESTAMP,
+                        UNIQUE(Email,Cin));

@@ -1,0 +1,23 @@
+.drop:hover {background-color:unset !important;}
+.car{width: 100px !important;}
+.no_underline{text-decoration:none}
+.active{  background-color: Orange;
+    color:black;
+    border:1px solid Orange;
+    border-radius:4px;
+    padding:8px;
+    padding-left: 13px;
+    margin:15px;
+    text-decoration: none;  
+     cursor: pointer;
+     color:black !important;
+    }
+.notactive{color:white !important;padding:8px;text-decoration: none; margin-right: 13px; cursor: pointer; offset:90px; position: relative; top:18px;}
+.notactive:hover{color:white;}
+.active:hover{color: black;}
+.margin{margin-left:110px !important;}
+.sticky{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+}
